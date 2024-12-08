@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <form id="expenseForm">
+      <input type="text" id="expenseName" placeholder="Expense Name" required>
+      <input type="number" id="expenseAmount" placeholder="Amount" required>
+      <input type="number" id="expenseQuantity" placeholder="Quantity" required>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <table id="expenseTable">
+      <thead>
+        <tr>
+          <th>Expense Name</th>
+          <th>Amount x Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Expenses will be added here -->
+      </tbody>
+    </table>
+
+    <div id="totalSection">
+      <p>Total: $<span id="totalAmount">0.00</span></p>
+    </div>
+
+    <button id="downloadBtn">Download PDF</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
